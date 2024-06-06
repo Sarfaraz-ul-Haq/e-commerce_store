@@ -1,5 +1,15 @@
+import Hero from "@/views/Hero";
+import ProductList from "@/views/ProductList";
+import PromotionsSection from "@/views/PromotionsSection";
+
 function Home() {
-  return <div>Homepage</div>;
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Hero />
+      {/* <PromotionsSection /> */}
+      <ProductList />
+    </div>
+  );
 }
 
 export default Home;
