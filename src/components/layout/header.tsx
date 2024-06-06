@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 
 function Header() {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mt-8">
       <Link href={"/"}>
         <Image src={Logo} alt="Dine Market Logo" className="w-40 h-7" />
       </Link>
@@ -19,14 +19,11 @@ function Header() {
       </div>
 
       <div className="flex items-center h-6 border rounded-md border-gray-300 relative text-black">
-        <Search
-          aria-placeholder="Search any product"
-          className="absolute h-5 w-5 ml-1"
-        />
-        <Input className="border-none h-6" />
+        <Search className="absolute h-5 w-5 ml-1" />
+        <Input className="border-none w-80" />
       </div>
 
-      <div className="bg-gray-100 rounded-full h-12 w-12 flex justify-center items-center">
+      <div className="bg-slate-200 rounded-full h-12 w-12 flex justify-center items-center">
         <Link href={"/"}>
           <ShoppingCart className="h-6 w-6" />
         </Link>
