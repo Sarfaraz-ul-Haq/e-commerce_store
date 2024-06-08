@@ -12,9 +12,9 @@ function Header() {
       </Link>
 
       <div className="flex gap-12 text-lg font-sans">
-        <Link href={"/"}>Female</Link>
-        <Link href={"/"}>Male</Link>
-        <Link href={"/"}>Kids</Link>
+        <Link href={"/category/female"}>Female</Link>
+        <Link href={"/category/male"}>Male</Link>
+        <Link href={"/category/kids"}>Kids</Link>
         <Link href={"/"}>All Products</Link>
       </div>
 
