@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-function ProductList() {
+function ProductsList() {
   return (
     <section className="flex flex-col mt-24 items-center">
       <h3 className="mb-5">PRODUCTS</h3>
@@ -46,4 +46,4 @@ function ProductList() {
   );
 }
 
-export default ProductList;
+export default ProductsList;
