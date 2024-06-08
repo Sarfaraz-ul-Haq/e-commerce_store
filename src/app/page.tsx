@@ -1,5 +1,5 @@
 import Hero from "@/views/Hero";
-import ProductList from "@/views/ProductList";
+import ProductList from "@/views/ProductsList";
 import PromotionsSection from "@/views/PromotionsSection";
 
 function Home() {

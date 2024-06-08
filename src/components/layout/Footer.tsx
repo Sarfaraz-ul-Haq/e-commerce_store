@@ -12,7 +12,7 @@ function Footer() {
       <div className="flex gap-40 mb-40">
         {/*Dine Market*/}
         <div className="flex flex-col gap-5">
-          <Image src={Logo} alt="Dine Market Logo" className="h-7 w-40" />
+          <Image src={Logo} alt="Dine Market Logo" className="h-8 w-44" />
           <div>
             Small, artisan label that offers a thoughtfully curated <br />
             collection of high quality everyday essentials made.
