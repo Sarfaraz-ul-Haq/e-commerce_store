@@ -7,27 +7,10 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <section className="main">
-      {/*footer*/}
-      <div className="flex gap-40 mb-40">
-        {/*Dine Market*/}
-        <div className="flex flex-col gap-5">
-          <Image src={Logo} alt="Dine Market Logo" className="h-7 w-40" />
-          <div>
-            Small, artisan label that offers a thoughtfully curated <br />
-            collection of high quality everyday essentials made.
-          </div>
-          <div className="flex gap-6 text-3xl">
-            <Link href={"#"}>
-              <FaTwitterSquare />
-            </Link>
-            <Link href={"#"}>
-              <FaFacebook />
-            </Link>
-            <Link href={"#"}>
-              <FaLinkedin />
-            </Link>
-          </div>
+    <div className="flex gap-40">
+      <div className="flex flex-col">
+        <div className="mb-4">
+          <Image src={Logo} alt="Dine Market Logo" />
         </div>
         {/*Company*/}
         <div className="flex-col">
@@ -40,31 +23,54 @@ function Footer() {
             <Link href={"#"}>Contact Us</Link>
           </div>
         </div>
-        {/*Support*/}
-        <div className="flex-col">
-          <h2 className="font-bold text-2xl mb-4">Support</h2>
-          <div className="flex flex-col gap-3">
-            <Link href={"#"}>Support Carrer</Link>
-            <Link href={"#"}>24h Service</Link>
-            <Link href={"#"}>Quick Chat</Link>
-          </div>
-        </div>
-        {/*Contact*/}
-        <div className="flex flex-col">
-          <h2 className="font-bold text-2xl mb-4">Contact</h2>
-          <div className="flex flex-col gap-3">
-            <Link href={"#"}>WhatsApp</Link>
-            <Link href={"#"}>Support 24h</Link>
-          </div>
+        <ul className="flex gap-3">
+          <li>
+            <Link href={"#"}>Twitter Logo</Link>
+          </li>
+          <li>
+            <Link href={"#"}>Facebook Logo</Link>
+          </li>
+          <li>
+            <Link href={"#"}>LinkedIn Logo</Link>
+          </li>
+        </ul>
+      </div>
+
+      {/*Company*/}
+      <div className="flex-col gap-4">
+        <h2 className="scroll-m-20 text-xl font-bold tracking-tight">
+          Company
+        </h2>
+        <div className="leading-7 [&:not(:first-child)]:mt-6">
+          <div>About</div>
+          <div>Terms of Use</div>
+          <div>Privacy Policy</div>
+          <div>How it Works</div>
+          <div>Contact Us</div>
         </div>
       </div>
 
-      {/*copyright*/}
+      {/*Support*/}
+      <div className="flex-col gap-4">
+        <h2 className="scroll-m-20 text-xl font-bold tracking-tight">
+          Support
+        </h2>
+        <div className="leading-7 [&:not(:first-child)]:mt-6">
+          <div>Support Carrer</div>
+          <div>24h Service</div>
+          <div>Quick Chat</div>
+        </div>
+      </div>
 
-      <div className="h-16 flex justify-between items-center text-1xl border-t-2 border-black">
-        <div>Copyright © 2022 Dine Market</div>
-        <div>Made by. Sarfaraz ul Haq</div>
-        <div>Learning Project</div>
+      {/*Contact*/}
+      <div className="flex-col gap-4">
+        <h2 className="scroll-m-20 text-xl font-bold tracking-tight">
+          Contact
+        </h2>
+        <div className="leading-7 [&:not(:first-child)]:mt-6">
+          <div>WhatsApp</div>
+          <div>Support 24h</div>
+        </div>
       </div>
     </section>
   );
