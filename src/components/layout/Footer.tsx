@@ -7,7 +7,9 @@ function Footer() {
     <div className="flex gap-40">
       <div className="flex flex-col">
         <div className="mb-4">
-          <Image src={Logo} alt="Dine Market Logo" />
+          <Link href={"/"}>
+            <Image src={Logo} alt="Dine Market Logo" />
+          </Link>
         </div>
         <div className="mb-3 leading-7 [&:not(:first-child)]:mt-6">
           Small, artisan label that offers a thoughtfully curated <br />
@@ -32,11 +34,11 @@ function Footer() {
           Company
         </h2>
         <div className="leading-7 [&:not(:first-child)]:mt-6">
-          <div>About</div>
-          <div>Terms of Use</div>
-          <div>Privacy Policy</div>
-          <div>How it Works</div>
-          <div>Contact Us</div>
+          <Link href={"#"}>About</Link>
+          <Link href={"#"}>Terms of Use</Link>
+          <Link href={"#"}>Privacy Policy</Link>
+          <Link href={"#"}>How it Works</Link>
+          <Link href={"#"}>Contact Us</Link>
         </div>
       </div>
 
@@ -46,9 +48,9 @@ function Footer() {
           Support
         </h2>
         <div className="leading-7 [&:not(:first-child)]:mt-6">
-          <div>Support Carrer</div>
-          <div>24h Service</div>
-          <div>Quick Chat</div>
+          <Link href={"#"}>Support Carrer</Link>
+          <Link href={"#"}>24h Service</Link>
+          <Link href={"#"}>Quick Chat</Link>
         </div>
       </div>
 
@@ -58,8 +60,8 @@ function Footer() {
           Contact
         </h2>
         <div className="leading-7 [&:not(:first-child)]:mt-6">
-          <div>WhatsApp</div>
-          <div>Support 24h</div>
+          <Link href={"#"}>WhatsApp</Link>
+          <Link href={"#"}>Support 24h</Link>
         </div>
       </div>
     </div>
