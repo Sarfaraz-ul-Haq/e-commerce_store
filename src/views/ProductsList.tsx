@@ -1,49 +1,57 @@
-import ProductCard from "@/components/ProductCard";
 import products from "@/data/products";
-import Image from "next/image";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import ProductCard from "@/components/ProductCard";
 
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
-function ProductsList() {
+const ProductsList = () => {
   return (
-    <section className="flex flex-col mt-24 items-center">
-      <h3 className="mb-5">PRODUCTS</h3>
-      <h1 className="mb-14">Check What We Have</h1>
-      <Carousel
-        opts={{
-          align: "start",
+    <div className="products-outer-container mt-24 mb-24">
+      <div className="subtitle text-center mb-8">
+        <h2 className="text-blue-800 font-bold mb-4">PRODUCTS</h2>
+        <h1 className="text-3xl font-bold">Check What We Have</h1>
+      </div>
+      <Swiper
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
         }}
-        className="w-full max-w-sm"
+        modules={[Navigation, A11y]}
+        spaceBetween={30}
+        slidesPerView={3}
+        navigation
+        className="p-4"
       >
-        <CarouselContent>
-          {products.map((product, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-3xl font-semibold">
-                      <Image src={product.image} alt="" />
-                      <div>{product.name}</div>
-                      <div>{product.price}</div>
-                    </span>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </section>
+        {products?.map((product) => (
+          <SwiperSlide key={product.id} className="p-2">
+            <ProductCard
+              name={product.name}
+              category={product.category}
+              price={product.price}
+              image={product.image}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
-}
+};
 
 export default ProductsList;
