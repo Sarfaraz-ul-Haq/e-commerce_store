@@ -9,7 +9,7 @@ export default function ProductCard({
 }: {
   image: StaticImageData;
   name: string;
-  category: string;
+  category?: string;
   price: string;
 }) {
   return (

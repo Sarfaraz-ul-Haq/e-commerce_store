@@ -43,7 +43,6 @@ const ProductsList = () => {
           <SwiperSlide key={product.id} className="p-2">
             <ProductCard
               name={product.name}
-              category={product.category}
               price={product.price}
               image={product.image}
             />
