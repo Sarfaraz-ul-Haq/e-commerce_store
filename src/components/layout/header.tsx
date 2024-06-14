@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Search, ShoppingCart } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
+// changed file name to sync with github to successfuly deploy on vercel
+
 function Header() {
   return (
     <div className="flex justify-between items-center mt-8">
