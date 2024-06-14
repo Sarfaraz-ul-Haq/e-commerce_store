@@ -1,5 +1,7 @@
+"use client";
+
 import Hero from "@/views/Hero";
-import ProductList from "@/views/ProductsList";
+import ProductsList from "@/views/ProductsList";
 import PromotionsSection from "@/views/PromotionsSection";
 
 function Home() {
@@ -7,7 +9,7 @@ function Home() {
     <div className="min-h-screen flex flex-col">
       <Hero />
       {/* <PromotionsSection /> */}
-      <ProductList />
+      <ProductsList />
     </div>
   );
 }
