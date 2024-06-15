@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProductCard from "@/components/ProductCard";
+import Image from "next/image";
 
 const ProductsList = () => {
   return (
@@ -33,19 +34,23 @@ const ProductsList = () => {
             spaceBetween: 40,
           },
         }}
-        modules={[Navigation, A11y]}
+        modules={[A11y]}
         spaceBetween={30}
         slidesPerView={3}
-        navigation
         className="p-4"
       >
         {products?.map((product) => (
-          <SwiperSlide key={product.id} className="p-2">
-            <ProductCard
-              name={product.name}
-              price={product.price}
-              image={product.image}
-            />
+          <SwiperSlide key={product.id}>
+            <div
+              className="p-8 transform scale-100 transition-transform
+              duration-500 ease hover:scale-110 overflow-hidden "
+            >
+              <div className="bg-gray-200 w-full h-[420px] flex justify-center items-center mb-3">
+                <Image src={product.image} alt={product.name} />
+              </div>
+              <div className="mb-2 font-bold">{product.name}</div>
+              <div className="font-bold">{product.price}</div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
