@@ -2,13 +2,14 @@
 
 import Hero from "@/views/Hero";
 import ProductsList from "@/views/ProductsList";
-import PromotionsSection from "@/views/PromotionsSection";
+import PromotionsSection from "@/views/EventsSection";
+import EventsSection from "@/views/EventsSection";
 
 function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Hero />
-      {/* <PromotionsSection /> */}
+      <EventsSection />
       <ProductsList />
     </div>
   );
