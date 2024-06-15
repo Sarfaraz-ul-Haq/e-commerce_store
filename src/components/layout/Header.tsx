@@ -23,7 +23,7 @@ function Header() {
         <Input className="border-none w-80" />
       </div>
 
-      <div className="bg-slate-200 rounded-full h-12 w-12 flex justify-center items-center">
+      <div className="bg-gray-300 rounded-full h-12 w-12 flex justify-center items-center">
         <Link href={"/"}>
           <ShoppingCart className="h-6 w-6" />
         </Link>
