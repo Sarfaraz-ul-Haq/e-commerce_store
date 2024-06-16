@@ -62,8 +62,8 @@ function Footer() {
       {/*COPYRIGHT*/}
       <div className="h-16 flex justify-between items-center text-1xl border-t-2 border-black">
         <div>Copyright © 2022 Dine Market</div>
-        <div>Made by. Sarfaraz ul Haq</div>
-        <div>Learning Project</div>
+        <div>Design by Weird Design Studio</div>
+        <div>Mde by Sarfaraz ul Haq</div>
       </div>
     </section>
   );
