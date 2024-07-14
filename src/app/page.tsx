@@ -1,5 +1,3 @@
-"use client";
-
 import Hero from "@/views/Hero";
 import ProductsList from "@/views/ProductsList";
 import PromotionsSection from "@/views/EventsSection";
