@@ -1,3 +1,4 @@
+"use client";
 import products from "@/data/products";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -5,7 +6,6 @@ import { Navigation, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import ProductCard from "@/components/ProductCard";
 import Image from "next/image";
 
 const ProductsList = () => {
