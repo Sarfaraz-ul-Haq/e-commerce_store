@@ -1,31 +1,36 @@
 import Image from "next/image";
 import { StaticImageData } from "next/image";
+import Link from "next/link";
 
-export default function ProductCard({
+function ProductCard({
   image,
   name,
-  category,
   price,
+  category,
 }: {
   image: StaticImageData;
   name: string;
-  category?: string;
   price: string;
+  category?: string;
 }) {
   return (
-    <div className="product-card p-8 transform scale-100 transition-transform duration-500 ease hover:scale-110 bg-gray-100">
-      <div className="bg-gray-300 w-full h-[420px] flex justify-center items-center overflow-hidden">
-        <Image src={image} alt={name} className="object-cover w-full h-full" />
-      </div>
-      <div className="product-name text-lg font-semibold text-[#212121] mt-2 leading-[24px] tracking-[0.03em]">
-        {name}
-      </div>
-      <div className="product-category text-[#212121] mt-2 leading-[24px]">
-        {category}
-      </div>
-      <div className="product-price text-xl font-semibold text-[#212121] mt-2 leading-[24px]">
-        ${price}
-      </div>
+    <div className="mb-5">
+      <Link href={"/"}>
+        <div
+          className={
+            "bg-gray-200 w-[260px] h-[265px] justify-center items-center mb-5"
+          }
+        >
+          <Image src={image} alt={name} />
+        </div>
+        <div className="font-bold mb-1">{name}</div>
+        {category && (
+          <div className="font-semibold text-gray-400 mb-2">{category}</div>
+        )}
+        <div className="font-bold text-xl">{price}</div>
+      </Link>
     </div>
   );
 }
+
+export default ProductCard;
