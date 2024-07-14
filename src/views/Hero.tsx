@@ -15,7 +15,7 @@ function Hero() {
       <div className="flex-1">
         <Badge
           variant={"outline"}
-          className="h-10 w-28 mt-28 bg-slate-200 text-blue-800 font-bold text-1xl justify-center"
+          className="h-10 w-28 mt-28 bg-gray-300 text-blue-800 font-bold text-1xl justify-center"
         >
           Sale 70%
         </Badge>
@@ -38,7 +38,7 @@ function Hero() {
       </div>
 
       {/*Right Side*/}
-      <div className="mt-10 justify-center items-center bg-slate-200 rounded-full">
+      <div className="mt-10 justify-center items-center bg-gray-300 rounded-full">
         <Image src={hero_pic} alt="Woman Picture" />
       </div>
     </section>
