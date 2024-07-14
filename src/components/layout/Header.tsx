@@ -15,7 +15,7 @@ function Header() {
         <Link href={"/category/female"}>Female</Link>
         <Link href={"/category/male"}>Male</Link>
         <Link href={"/category/kids"}>Kids</Link>
-        <Link href={"/"}>All Products</Link>
+        <Link href={"/category/products"}>All Products</Link>
       </div>
 
       <div className="flex items-center h-6 border rounded-md border-gray-300 relative text-black">
