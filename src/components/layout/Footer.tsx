@@ -7,9 +7,9 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <section className="main">
+    <section className="main mt-auto">
       {/*FOOTER*/}
-      <div className="flex gap-40 mb-40">
+      <div className="flex gap-40 mb-28">
         {/*Dine Market*/}
         <div className="flex flex-col gap-5">
           <Image src={Logo} alt="Dine Market Logo" className="h-8 w-44" />
@@ -62,8 +62,12 @@ function Footer() {
       {/*COPYRIGHT*/}
       <div className="h-16 flex justify-between items-center text-1xl border-t-2 border-black">
         <div>Copyright © 2022 Dine Market</div>
-        <div>Design by Weird Design Studio</div>
-        <div>Mde by Sarfaraz ul Haq</div>
+        <div>
+          Design by. <b>Weird Design Studio</b>
+        </div>
+        <div>
+          Made by <b>Sarfaraz ul Haq</b>
+        </div>
       </div>
     </section>
   );
