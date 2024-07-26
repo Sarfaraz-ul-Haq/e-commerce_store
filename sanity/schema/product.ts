@@ -1,29 +1,46 @@
 import { defineField, defineType } from "sanity";
 
-export const product = defineType({
+export default defineType({
   name: "product",
-  title: "Product",
   type: "document",
+  title: "Product",
   fields: [
     defineField({
-      name: "Title",
-      type: "string",
-    }),
-    defineField({
-      name: "Price",
-      type: "number",
-    }),
-    defineField({
-      name: "Category",
-      type: "string",
-    }),
-    defineField({
-      name: "Description",
-      type: "string",
-    }),
-    defineField({
-      name: "Image",
+      name: "image",
+      title: "Image",
       type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "price",
+      title: "Price",
+      type: "number",
+      validation: (Rule) => Rule.required().min(0),
+    }),
+    defineField({
+      name: "category",
+      to: [{ type: "category" }],
+      title: "Category",
+      type: "reference",
+    }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "text",
+    }),
+    defineField({
+      name: "stock",
+      title: "Stock",
+      type: "number",
+      validation: (Rule) => Rule.min(0),
     }),
   ],
 });
