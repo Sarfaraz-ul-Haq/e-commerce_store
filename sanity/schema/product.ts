@@ -1,46 +1,51 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "product",
   type: "document",
+  name: "product",
   title: "Product",
   fields: [
     defineField({
-      name: "image",
+      type: "array",
+      name: "images",
       title: "Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      of: [{ type: "image" }],
     }),
     defineField({
+      type: "string",
       name: "title",
       title: "Title",
-      type: "string",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      type: "number",
       name: "price",
       title: "Price",
-      type: "number",
       validation: (Rule) => Rule.required().min(0),
     }),
     defineField({
-      name: "category",
-      to: [{ type: "category" }],
-      title: "Category",
-      type: "reference",
-    }),
-    defineField({
+      type: "text",
       name: "description",
       title: "Description",
-      type: "text",
     }),
     defineField({
+      type: "reference",
+      name: "category",
+      title: "Category",
+      to: [{ type: "category" }],
+    }),
+    defineField({
+      type: "slug",
+      name: "slug",
+      title: "Product Slug",
+      options: {
+        source: "name",
+      },
+    }),
+    defineField({
+      type: "number",
       name: "stock",
       title: "Stock",
-      type: "number",
-      validation: (Rule) => Rule.min(0),
     }),
   ],
 });
