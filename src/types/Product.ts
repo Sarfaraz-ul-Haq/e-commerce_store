@@ -1,7 +1,10 @@
-export interface Product {
+export default interface Product {
   _id: string;
-  name: string;
-  category: string;
+  title: string;
   price: number;
-  image: any;
+  description?: string;
+  stock?: number;
+  images: { asset: { url: string } }[];
+  category: string;
+  slug: string;
 }
