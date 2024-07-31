@@ -14,9 +14,10 @@ function ProductCard({
   category?: string;
   slug: string;
 }) {
+  // I commented product dynamic route because I'll work on it later so temporary changing url from /product/${slug} to /
   return (
     <div className="mb-5">
-      <Link href={`/product/${slug}`}>
+      <Link href={`/`}>
         <div
           className={
             "bg-gray-200 w-[260px] h-[265px] justify-center items-center mb-5 relative"
