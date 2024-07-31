@@ -15,7 +15,7 @@ This is an e-commerce store built with Next.js, TypeScript, Tailwind CSS, and Sh
 git clone https://github.com/Sarfaraz-ul-Haq/e-commerce_store.git
 cd e-commerce_store
 
-Install Dependencies:
-bash
+### Install Dependencies:
+```bash
 Copy code
 pnpm install
