@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+E-commerce Store
+Description
+This is an e-commerce store built with Next.js, TypeScript, Tailwind CSS, and Shadcn UI. The backend is powered by Sanity CMS, and the application is deployed on Vercel. The project features dynamic routing for products and categories.
 
-## Getting Started
+Features
+Dynamic Routing: Categories and products are dynamically loaded based on data from Sanity.
+Responsive Design: Built with Tailwind CSS for a modern UI. (Currently optimized for desktop only)
+Sanity Integration: Products and categories are managed using Sanity CMS.
 
-First, run the development server:
+Setup Instructions
+Clone the Repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+git clone https://github.com/Sarfaraz-ul-Haq/e-commerce_store.git
+cd e-commerce_store
+Install Dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+pnpm install
+Set Up Environment Variables:
+Create a .env.local file in the root directory and add your Sanity project ID, dataset, and other necessary environment variables:
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
+NEXT_PUBLIC_SANITY_DATASET=your_sanity_dataset
+Run the Development Server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+pnpm run dev
+Open http://localhost:3000 with your browser to see the result.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Todo
+Product Detail Page: Implement the dynamic route for individual product details.
+Add to Cart Functionality: Implement functionality to add products to the cart.
+Stripe Integration: Integrate Stripe for payment processing.
+Mobile Responsiveness: Optimize the design for mobile devices.
+Notifications: Integrate React Hot Toast for notifications.
+Icons: Use Lucid Icons from Shadcn UI.
