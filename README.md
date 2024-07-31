@@ -14,28 +14,3 @@ This is an e-commerce store built with Next.js, TypeScript, Tailwind CSS, and Sh
 ```bash
 git clone https://github.com/Sarfaraz-ul-Haq/e-commerce_store.git
 cd e-commerce_store
-Install Dependencies:
-bash
-Copy code
-pnpm install
-Set Up Environment Variables:
-Create a .env.local file in the root directory and add your Sanity project ID, dataset, and other necessary environment variables:
-
-bash
-Copy code
-NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
-NEXT_PUBLIC_SANITY_DATASET=your_sanity_dataset
-Run the Development Server:
-bash
-Copy code
-pnpm run dev
-Open http://localhost:3000 with your browser to see the result.
-
-Todo
-Product Detail Page: Implement the dynamic route for individual product details.
-Add to Cart Functionality: Implement functionality to add products to the cart.
-Stripe Integration: Integrate Stripe for payment processing.
-Mobile Responsiveness: Optimize the design for mobile devices.
-Notifications: Integrate React Hot Toast for notifications.
-Icons: Use Lucid Icons from Shadcn UI.
-go
