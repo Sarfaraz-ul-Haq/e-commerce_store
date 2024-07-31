@@ -39,8 +39,10 @@ export default defineType({
       name: "slug",
       title: "Product Slug",
       options: {
-        source: "name",
+        source: "title",
+        maxLength: 200,
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       type: "number",
