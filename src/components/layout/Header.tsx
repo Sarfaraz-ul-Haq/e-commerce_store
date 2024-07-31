@@ -43,12 +43,12 @@ function Header() {
       </div>
 
       <div className="flex items-center h-6 border rounded-md border-gray-300 relative text-black">
-        <Search className="absolute h-5 w-5 ml-1" />
+        <Search className="absolute border-none w-5 ml-1" />
         <Input className="border-none w-80" />
       </div>
 
       <div className="bg-gray-300 rounded-full h-12 w-12 flex justify-center items-center">
-        <Link href={"/"}>
+        <Link href={"/cart"}>
           <ShoppingCart className="h-6 w-6" />
         </Link>
       </div>
