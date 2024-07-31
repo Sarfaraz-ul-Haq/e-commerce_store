@@ -48,7 +48,6 @@ export default function Page({ params }: { params: { slug: string } }) {
           key={product._id}
           image={product.images[0]?.asset.url}
           name={product.title}
-          category={product.category}
           price={product.price}
           slug={product.slug}
         />
