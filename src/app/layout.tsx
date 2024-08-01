@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Loading from "./loading";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +24,10 @@ export default function RootLayout({
         className={`${inter.className} min-h-screen flex flex-col ml-32 mr-32`}
       >
         <Header />
-        <main className="flex-grow">{children}</main>
+        <Suspense fallback={<Loading />}>
+          <main className="flex-grow">{children}</main>
+        </Suspense>
+
         <Footer />
       </body>
     </html>
