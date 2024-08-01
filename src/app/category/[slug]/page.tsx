@@ -42,7 +42,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="mt-14 mb-28 flex flex-wrap justify-center gap-6">
+    <div className="mt-14 mb-28 flex flex-wrap justify-center gap-16">
       {products.map((product: Product) => (
         <ProductCard
           key={product._id}
