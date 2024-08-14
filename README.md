@@ -40,4 +40,4 @@ This is an e-commerce store built with Next.js, TypeScript, Tailwind CSS, and Sh
 - **Stripe Integration**: Integrate Stripe for payment processing.
 - **Mobile Responsiveness**: Optimize the design for mobile devices.
 - **Notifications**: Integrate React Hot Toast for notifications.
-- **Icons**: Use Lucid Icons from Shadcn UI.
+
